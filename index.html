@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            place-items: center;
+            background-image: linear-gradient(45grad, #360762, #773131, #6a1a47, #11114b);
+        }
+
+        .login-form {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            width: 300px;
+            height: 400px;
+            background-color: #ffffff1c;
+            border-radius: 35px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .login {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .icon-profile {
+            margin: 30px;
+        }
+
+        .icon-profile > .profile > img {
+            width: 100px;
+        }
+
+        .input-box {
+            width: 100%;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+        }
+
+        .input-box > input {
+            position: fixed;
+            font-size: 18px;
+            width: 200px;
+            background-color: #ffffff00;
+            color: white;
+            border: none;
+            outline: 0;
+            margin-left: 30px;
+            margin-bottom: 30px;
+        }
+
+        .input-box > .border {
+            position: fixed;
+            width: 230px;
+            border-bottom: 1px solid #ffffff88;
+        }
+
+        .input-box > label {
+            font-family: Arial, Helvetica, sans-serif;
+            position: fixed;
+            color: rgba(255, 255, 255, 0.58);
+            margin-bottom: 20px;
+            margin-left: 50px;
+            transition: .4s ease-in-out;
+            cursor: text;
+        }
+
+        input:focus ~ label,
+        input:valid ~ label {
+            scale: .8;
+            translate: -20px -25px;
+        }
+
+        .input-box .icon {
+            width: 220px;
+            display: flex;
+            justify-content: left;
+            translate: 0 -15px;
+        }
+
+        .input-box i img {
+            scale: .6;
+        }
+
+        .remember a {
+            font-size: 11px;
+            color: #ffffffa5;
+        }
+
+        .remember label {
+            font-size: 12px;
+            color: #ffffffa5;
+            margin-right: 50px;
+            cursor: pointer;
+        }
+
+        a:hover {
+            color: white;
+        }
+
+        button {
+            font-size: 16px;
+            width: 220px;
+            height: 40px;
+            border-radius: 10px;
+            border: none;
+            background-image: linear-gradient(45grad, #58006c, #042577, #072f4b, #4b0327);
+            color: white;
+            cursor: pointer;
+            opacity: .7;
+            transition: .3s ease-in-out;
+        }
+
+        button:hover {
+            opacity: 1;
+        }
+
+    </style>
+</head>
+<body>
+    <form class="login-form">
+        <div class="icon-profile">
+            <span class="profile">
+              <img src="img/icon-profile.png">
+            </span>
+        </div>
+        <div class="login">
+            <div class="input-box email">
+                <span class="icon">
+                    <i>
+                        <img src="img/icon-email.png">
+                    </i>
+                </span>
+                <input type="email" id="email" required>
+                <span class="border"></span>
+                <label for="email">
+                    Email ID
+                </label>
+            </div>
+            <br><br>
+            <div class="input-box senha">
+                <span class="icon">
+                    <i>
+                        <img src="img/icon-senha.png">
+                    </i>
+                </span>
+                <input type="password" id="senha" required>
+                <span class="border"></span>
+                <label for="senha">
+                    Senha
+                </label>
+            </div>
+            <br>
+            <div class="remember">
+                <input type="checkbox" id="remember">
+                <label for="remember">Lembre-me</label>
+                <a href="">
+                    Esqueceu a senha?
+                </a>
+            </div>
+            <br><br>
+            <button>Entrar</button>
+        </div>
+    </form>
+</body>
+</html>
